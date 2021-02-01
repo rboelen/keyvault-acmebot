@@ -60,7 +60,7 @@
     "functionAppName": "[concat(parameters('appNamePrefix'),'-','func-', substring(uniquestring(resourceGroup().id, deployment().name), 0, 4))]",
     "appServicePlanName": "[concat(parameters('appNamePrefix'),'-','plan-', substring(uniquestring(resourceGroup().id, deployment().name), 0, 4))]",
     "appInsightsName": "[concat(parameters('appNamePrefix'), '-','appi-', substring(uniquestring(resourceGroup().id, deployment().name), 0, 4))]",
-    "storageAccountName": "[concat(parameters('appNamePrefix'),'st', uniquestring(resourceGroup().id, deployment().name), 'func')]",
+    "storageAccountName": "[concat('st', uniquestring(resourceGroup().id, deployment().name), 'func')]",
     "storageAccountId": "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
     "keyVaultName": "[concat(parameters('appNamePrefix'), '-','kv-',  substring(uniquestring(resourceGroup().id, deployment().name), 0, 4))]",
     "keyVaultSkuName": "[parameters('keyVaultSkuName')]",
